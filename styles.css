@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: clamp(3.5rem, 12vw + 1rem, 6.5rem);
+}
+
+header{
+    position: fixed;
+    background-color: rgba(70, 10, 236, 0.45);
+    width: 100%;
+    padding: 0rem 2rem;
+    z-index: 100;
+}
+
+/*Esto hace a las imágenes responsivas*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+li{
+    list-style: none;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    background-color: rgb(79, 8, 211);
+    background-image: url(img/hero-image-new.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    width: 100%;
+    padding: 1.2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container_title{
+    padding: 12rem 3rem;
+}
+
+.register_button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(76, 64, 240);
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 3.5rem);
+    border: thin solid black;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+/*ESTILO DE BOTÓN HAMBURGUESA*/
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.nav-hamburger {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu a,
+.logo-lyric a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo-lyric a {
+    font-size: 2.2rem;
+}
+
+.nav-menu a:hover{
+    background-color: rgba(76, 64, 240);
+    border-radius: 15px;
+    padding: 0.1rem 0.6rem;
+}
+
+.nav-menu ul{
+    display: flex;
+    gap: 2.5rem;
+}
+
+/*DROPDOWN MENU*/
+.nav-hamburger-dropdown{
+    position: absolute;
+    background-color: rgba(10, 25, 236, 0.40);
+    backdrop-filter: blur(10px);
+    width: 210px;
+    margin-top: 15px;
+    border-radius: 15px;
+    display: none;
+}
+
+.nav-hamburger-dropdown li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem 1.2rem;
+}
+
+.nav-hamburger-dropdown a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-hamburger-dropdown a:hover{
+    background-color: rgba(76, 64, 240);
+    border-radius: 10px;
+    padding: 0.1rem 1rem;
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width:540px){
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-hamburger {
+        display: block;
+    }
+    
+    .nav-hamburger-dropdown {
+        display: block;
+    }
+
+   .nav-hamburger-dropdown{
+    width: 85%;
+    left:50%;
+    transform: translateX(-50%);
+   }
+
+   h1{
+    font-size: 4.2rem;
+   }
+}
